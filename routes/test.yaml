@@ -1,0 +1,8 @@
+- from:
+    uri: timer:test-002?period=1s
+    steps:
+      - set-body:
+          constant: Hello World
+      - log: Goodbye
+      - to:
+          uri: file:C:/Develop/filetest?fileName=sample.txt

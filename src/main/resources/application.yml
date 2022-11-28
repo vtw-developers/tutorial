@@ -1,0 +1,22 @@
+camel:
+  rest:
+    port: 9999
+    context-path: api
+    binding-mode: json
+    component: jetty
+  springboot:
+    main-run-controller: true
+#    routes-include-pattern: file:C:/Develop/Projects/tutorial2/routes/*.yaml
+#    routes-reload-enabled: true
+#    routes-reload-directory: file:C:/Develop/Projects/tutorial2/routes
+#    routes-reload-pattern: "*.yaml"
+  component:
+    kafka:
+      brokers: localhost:9092
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+
+
+custom:
+  root-dir: C:/Test
+  name: ???
